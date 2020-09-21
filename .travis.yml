@@ -3,7 +3,7 @@ node_js:
  - 10.17.0
 branches:
   only:
-  - development
+  - master
 before_deploy:
   - npm run build
 deploy:
@@ -15,6 +15,6 @@ deploy:
   local_dir: build
   skip_cleanup: true
   on:
-    branch: development
+    branch: master
 after_deploy:
   - echo "Static site deployed"
